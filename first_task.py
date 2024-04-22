@@ -14,7 +14,7 @@ def total_salary(path: str) -> tuple:
             for emploee in file.readlines():
                 if emploee.strip():
                     try:
-                        _, salary = emploee.split(',')
+                        _, salary = emploee.split(',', 2)
                         salaries.append(int(salary))
                     except ValueError:
                         continue
